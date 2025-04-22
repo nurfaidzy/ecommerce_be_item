@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import { ApiResponse } from 'src/interfaces/response.dto';
+import { ApiResponse } from 'src/interfaces/response.interface';
 
 export function respond<T>({
   status,

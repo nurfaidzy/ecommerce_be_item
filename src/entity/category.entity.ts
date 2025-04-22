@@ -9,13 +9,6 @@ import {
 
 @Entity({ name: 'category' })
 export class Category {
-  // // Relation to Products
-  // sluqId       Int
-  // sluq         CategorySluq @relation(fields: [sluqId], references: [id])
-  // products     Product[]
-  // // Automatically update updatedAt on record changes
-  // @@map("categories")
-
   @PrimaryGeneratedColumn()
   id: number;
 
