@@ -7,6 +7,10 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
+// This is the Product entity
+// It will be used to store product information
+// Example: Iphone 14, Samsung Galaxy S23, etc. from slugs
+
 @Entity()
 export class Product {
   // Replace with your actual entity name
@@ -18,9 +22,6 @@ export class Product {
 
   @Column({ unique: true }) // Assuming slug should be unique
   slug: string;
-
-  @Column({ nullable: true })
-  frontEndUrl: string;
 
   @Column({
     type: 'decimal',

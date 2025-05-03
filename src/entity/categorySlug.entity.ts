@@ -7,6 +7,9 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
+// slugs are used to create sub of categories
+// for example Electronics > Mobile > Apple
+
 @Entity({ name: 'category_slug' })
 export class CategorySlug {
   @PrimaryGeneratedColumn()
@@ -14,9 +17,6 @@ export class CategorySlug {
 
   @Column()
   name: string;
-
-  @Column({ nullable: true })
-  frontEndUrl: string;
 
   @CreateDateColumn()
   createdAt: Date;

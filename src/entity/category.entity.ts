@@ -7,6 +7,9 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
+// this is the Category
+// it will use as referance in the product entity example Electronics, Fashion, etc
+
 @Entity({ name: 'category' })
 export class Category {
   @PrimaryGeneratedColumn()
@@ -14,9 +17,6 @@ export class Category {
 
   @Column()
   name: string;
-
-  @Column({ nullable: true })
-  frontEndUrl: string;
 
   @CreateDateColumn()
   createdAt: Date;

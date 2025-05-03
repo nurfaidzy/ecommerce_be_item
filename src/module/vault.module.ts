@@ -12,10 +12,10 @@ export class VaultModule {
 
   async testVaultConnection() {
     try {
-      const data = await this.vaultService.read('/ecommarce_category/data/dev');
-      console.log('VAULT DATA:', data);
+      await this.vaultService.read('/ecommarce_category/data/dev');
     } catch (error) {
       console.error('VAULT ERROR:', error);
+      throw new Error(`Vault error ${error}`);
     }
   }
 }
